@@ -22,8 +22,25 @@
         }
       }
 
+      class CheckBox extends React.Component {
+        render() {
+          return (
+            <div>
+              <h3>Now I will create a checkbox:</h3>
+              <input type="checkbox" />
+            </div>
+          );
+        }
+      }
+
       ReactDOM.render(
-        <Greeting />, document.getElementById('app')
+        <div>
+          <Greeting />
+          <CheckBox />
+        </div>
+
+        , document.getElementById('app')
+        
       );
     </script>
   </body>
