@@ -12,19 +12,68 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
 
     <script type="text/babel">
+
+
       class Greeting extends React.Component {
         render() {
           return (
             <div>
               <h1>Hello {this.props.name}!</h1>
+              <h4>Take a look at these input type attributes rendered with React. We are using &quot;props&quot;:</h4>
+              <br />
             </div>
           );
         }
       }
 
+
+      class Element extends React.Component {
+        render() {
+          return (
+            <div>
+              <h4>This is a {this.props.element} &lt;input&gt; type attribute:</h4>
+              <input type={this.props.element} />
+            </div>
+          );
+        }
+      }
+
+
+      class Counter extends React.Component {
+        constructor(props) {
+          super(props);
+
+          this.state = {
+            count: 0
+          }
+        }
+
+
+        render() {
+            return (
+              <div>
+                <br />
+                <h2>Now we will use &quot;state&quot; and event handling. Click the button down below to increment the number: </h2>
+                <button onClick={() => this.setState ({count: this.state.count + 1})}>{this.state.count}</button>
+              </div>
+
+            );
+        }
+     }
+
+
       ReactDOM.render(
-        <Greeting name="Cesar" />, document.getElementById('app')
+        <div>
+          <Greeting name="Visitor" />
+          <Element element="checkbox" />
+          <Element element="color" />
+          <Element element="password" />
+          <Counter />
+        </div>
+        , document.getElementById('app')
+
       );
+
     </script>
   </body>
 </html>
