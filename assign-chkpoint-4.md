@@ -23,5 +23,6 @@ I have read and understood the topics regarding components and props, and also h
 > Build upon your component from the previous checkpoint's assignment, add in state and props to make sure you have fully mastered these core React properties.
 
 **A.**
+Please refer to file: `greeting.html`
 
 ###### *Submitted by Cesar Jimenez*
